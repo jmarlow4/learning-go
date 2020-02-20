@@ -29,7 +29,7 @@ func fromJson(in string, pb proto.Message) {
 
 func toJson(pb proto.Message) string {
 	marshaler := jsonpb.Marshaler{}
-	out, err := marshaler.MarshalToString((pb))
+	out, err := marshaler.MarshalToString(pb)
 	if err != nil {
 		log.Fatalln("Can't convert to JSON", err)
 	}
